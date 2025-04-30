@@ -31,9 +31,9 @@ with col2:
  st.metric(label="Total de stock disponible", value=int(df_filtrado["Cantidad_Actual"].sum()))
 with col3:
  st.metric(label="Productos bajo umbral minimo", value=(df_filtrado["Cantidad_Actual"] < 
-df_filtrado["Umbral_Mínimo"]).sum())
+df_filtrado["Umbral_Minimo"]).sum())
 # Gráficos
-st.subheader(" Distribución de Stock por Categoria")
+st.subheader(" Distribucion de Stock por Categoria")
 stock_categoria = df_filtrado.groupby("Categoría")["Cantidad_Actual"].sum()
 st.bar_chart(stock_categoria)
 st.subheader(" Distribución por Almacen")
