@@ -34,8 +34,8 @@ with col3:
 df_filtrado["Umbral_Minimo"]).sum())
 # Gráficos
 st.subheader(" Distribucion de Stock por Categoria")
-stock_categoria = df_filtrado.groupby("Categoría")["Cantidad_Actual"].sum()
+stock_categoria = df_filtrado.groupby("Categoria")["Cantidad_Actual"].sum()
 st.bar_chart(stock_categoria)
-st.subheader(" Distribución por Almacen")
+st.subheader(" Distribucion por Almacen")
 stock_almacen = df_filtrado.groupby("Almacen")["Cantidad_Actual"].sum()
 st.bar_chart(stock_almacen)
