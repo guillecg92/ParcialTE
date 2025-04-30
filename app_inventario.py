@@ -14,9 +14,9 @@ st.title(" Sistema Inteligente de Control de Inventario - ConsumoMax")
 # Filtros laterales
 st.sidebar.header("Filtros de busqueda")
 almacen = st.sidebar.multiselect("Seleccionar almacen:", options=df["Almacen"].unique(), 
-default=df["Almacén"].unique())
-categoria = st.sidebar.multiselect("Seleccionar categoría:", options=df["Categoría"].unique(), 
-default=df["Categoría"].unique())
+default=df["Almacen"].unique())
+categoria = st.sidebar.multiselect("Seleccionar categoria:", options=df["Categoria"].unique(), 
+default=df["Categoria"].unique())
 # Aplicar filtros
 df_filtrado = df[(df["Almacen"].isin(almacen)) & (df["Categoria"].isin(categoria))]
 # Mostrar datos filtrados
